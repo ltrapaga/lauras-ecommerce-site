@@ -35,12 +35,35 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", (req, res) => {
-  // create a new tag
+// create new tag
+router.post("/", async (req, res) => {
+  try {
+    const newTag = await Tag.create();
+
+    res.status(201).json(newTag);
+  } catch (err) {
+    req.status(500).json(err);
+  }
 });
 
-router.put("/:id", (req, res) => {
-  // update a tag's name by its `id` value
+// update a tag's name by its `id` value
+router.put("/:id", async (req, res) => {
+  try {
+    const updateTag = await Tag.update(
+      {
+        tag_name: req.body.tag_name,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+
+    res.status(200).json(updateTag);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.delete("/:id", (req, res) => {

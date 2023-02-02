@@ -41,6 +41,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// TODO: Fix 400 Error - SequelizeValidationError
 // create new product
 router.post("/", (req, res) => {
   /* req.body should look like this...
@@ -73,6 +74,7 @@ router.post("/", (req, res) => {
     });
 });
 
+// TODO: Fix 400 Error
 // update product
 router.put("/:id", (req, res) => {
   // update product data
