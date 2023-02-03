@@ -38,8 +38,11 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   // create new tag
   try {
-    const newTag = await Tag.create();
-
+    const newTag = await Tag.create(
+      {
+      tag_name: req.body.tag_name,
+      }
+    );
     res.status(201).json(newTag);
   } catch (err) {
     req.status(500).json(err);
@@ -51,6 +54,7 @@ router.put("/:id", async (req, res) => {
   try {
     const updateTag = await Tag.update(
       {
+        id: req.body.id,
         tag_name: req.body.tag_name,
       },
       {
@@ -59,7 +63,6 @@ router.put("/:id", async (req, res) => {
         },
       }
     );
-
     res.status(200).json(updateTag);
   } catch (err) {
     res.status(500).json(err);
@@ -75,10 +78,9 @@ router.delete("/:id", async (req, res) => {
       },
     });
     if (!deleteTag) {
-      res.status(404).json({ message: "No tag found with that id!" });
+      res.status(404).json({ message: "No tag found with that id" });
       return;
     }
-
     res.status(200).json(deleteTag);
   } catch (err) {
     res.status(500).json(err);

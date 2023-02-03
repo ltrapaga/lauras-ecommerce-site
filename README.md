@@ -1,8 +1,8 @@
-# Back-End E-commerce Site
+# E-commerce Site: Back End
 
 ## Description
 
-Using Node.js, this back-end E-commerce application takes a working Express.js API and configures it to use Sequelize to interact with a MySQL database.
+In Node.js, this back end E-commerce application utilizes CRUD operations to maintain records stored in a MySQL database, Express REST API to control that data through HTTP requests, and the Sequelize ORM library to optimize database interaction.
 
 ## Table of Contents
 
@@ -20,16 +20,15 @@ The following necessary dependencies must be installed to run the application:
 * Dotenv
 * Express
 * Sequelize
-* Nodemon
 
 ## Usage
 
 To use this application:
 
 * Git clone this repository and run "npm i"
-* Using MySql, run source db/schema.sql
+* Using MySql, run "source db/schema.sql"
 * Exit MySQL or open an intergrated terminal in server.js
-* Run "node run seed"
+* Run "npm run seed"
 * Run "npm start"
   
 ## Contributions
