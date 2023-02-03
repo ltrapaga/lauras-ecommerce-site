@@ -31,6 +31,8 @@ To use this application:
 * Run "npm run seed"
 * Run "npm start"
 
+Please visit <https://drive.google.com/file/d/18SyOknt4w3Yrg2mq4qMtVHCSbU1JOFup/view> to view a video of the typical user flow through the application using Insomnia.
+
 <img width="1166" alt="image" src="https://user-images.githubusercontent.com/115514660/216691701-ebe96b30-44b4-486b-baa6-30ba0dd3c6ab.png">
 <img width="1124" alt="image" src="https://user-images.githubusercontent.com/115514660/216691767-84f2c3f4-31dd-4f7c-9a2a-a7ad44c726e1.png">
 <img width="1135" alt="image" src="https://user-images.githubusercontent.com/115514660/216695006-6baa944d-c56b-4f3b-96bb-33726bf6d5ff.png">
